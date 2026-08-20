@@ -4,10 +4,14 @@ k_mattun｜山口ローカルガイド 初期版
 ユーザー提供写真5枚を店舗ページに使用しています。
 
 ファイル：
-- index.html
-- article-legit.html
-- style.css
-- legit-1.jpeg ～ legit-5.jpeg
+* index.html
+* article-legit.html
+* style.css
+* legit-1.jpeg
+* legit-2.jpeg
+* legit-3.jpeg
+* legit-4.jpeg
+* legit-5.jpeg
 
 公開前に確認すること：
 1. 店舗情報・営業時間・定休日
