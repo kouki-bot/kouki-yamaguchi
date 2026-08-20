@@ -4,7 +4,7 @@ k_mattun｜山口ローカルガイド 初期版
 ユーザー提供写真5枚を店舗ページに使用しています。
 
 ファイル：
-* index.html
+* kouki-yamaguchi/index.html
 * article-legit.html
 * style.css
 * legit-1.jpeg
