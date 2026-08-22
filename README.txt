@@ -5,6 +5,7 @@ k_mattun｜山口ローカルガイド 初期版
 
 ファイル：
 * kouki-yamaguchi/index.html
+＊index.html
 * article-legit.html
 * style.css
 * legit-1.jpeg
