@@ -4,19 +4,530 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CAFE Legit（リジット）｜店舗集客診断｜山口店舗集客</title>
+  <title>CAFE Legit（リジット）｜店舗診断｜山口店舗集客</title>
 
   <meta
     name="description"
-    content="山陽小野田市のCAFE Legit（リジット）を対象に、Instagram・Googleマップ・Web導線の視点から店舗集客を診断したサンプルです。"
+    content="山陽小野田市のCAFE Legit（リジット）を対象にした店舗集客診断サンプル。"
   >
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* =========================
+       CAFE Legit 専用デザイン
+    ========================= */
+
+    body {
+      background: #f7f2eb;
+      color: #40372f;
+    }
+
+    .site-header {
+      background: rgba(255, 252, 247, 0.96);
+      border-bottom: 1px solid #e8ded2;
+    }
+
+    /* ===== HERO ===== */
+
+    .legit-hero {
+      position: relative;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: #4d4036;
+      color: #fff;
+    }
+
+    .legit-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(42, 32, 25, 0.78),
+          rgba(42, 32, 25, 0.18)
+        ),
+        url("legit-1.jpeg") center / cover no-repeat;
+
+      transform: scale(1.02);
+    }
+
+    .legit-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .legit-hero-copy {
+      max-width: 650px;
+      padding: 90px 0;
+    }
+
+    .legit-kicker {
+      display: inline-block;
+      margin-bottom: 18px;
+
+      color: #ead7c3;
+
+      letter-spacing: 0.18em;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .legit-hero h1 {
+      margin: 0;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(46px, 8vw, 78px);
+
+      line-height: 1.02;
+      letter-spacing: 0.02em;
+    }
+
+    .legit-hero h1 span {
+      display: block;
+
+      margin-top: 14px;
+
+      font-family: sans-serif;
+
+      font-size: 20px;
+      font-weight: 500;
+
+      letter-spacing: 0.18em;
+    }
+
+    .legit-hero p {
+      margin: 26px 0 0;
+
+      color: rgba(255, 255, 255, 0.9);
+
+      line-height: 1.9;
+    }
+
+
+    /* ===== 共通 ===== */
+
+    .legit-section {
+      padding: 78px 0;
+    }
+
+    .legit-label {
+      color: #98785d;
+
+      letter-spacing: 0.16em;
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .legit-section h2 {
+      margin: 8px 0 22px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      color: #493d34;
+
+      font-size: clamp(28px, 5vw, 40px);
+
+      line-height: 1.3;
+    }
+
+    .legit-lead {
+      max-width: 720px;
+
+      line-height: 2;
+
+      color: #665b51;
+    }
+
+
+    /* ===== 写真 ===== */
+
+    .legit-photo-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.15fr
+        0.85fr;
+
+      gap: 18px;
+
+      margin-top: 38px;
+    }
+
+    .legit-photo {
+      overflow: hidden;
+
+      border-radius: 20px;
+
+      background: #e8dfd4;
+
+      box-shadow:
+        0 14px 35px
+        rgba(60, 45, 32, 0.10);
+    }
+
+    .legit-photo img {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    .legit-photo-large {
+      min-height: 520px;
+    }
+
+    .legit-photo-stack {
+      display: grid;
+
+      grid-template-rows:
+        1fr
+        1fr;
+
+      gap: 18px;
+    }
+
+    .legit-photo-small {
+      min-height: 250px;
+    }
+
+    .legit-caption {
+      padding: 14px 18px 18px;
+
+      background: #fffdf9;
+
+      font-size: 14px;
+
+      color: #6b5d50;
+    }
+
+
+    /* ===== 店舗情報 ===== */
+
+    .legit-info {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 16px;
+
+      margin-top: 32px;
+    }
+
+    .legit-info-card {
+      padding: 26px;
+
+      background: #fffdf9;
+
+      border:
+        1px solid
+        #e8ded2;
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 8px 25px
+        rgba(60, 45, 32, 0.04);
+    }
+
+    .legit-info-card b {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: #765d49;
+
+      font-size: 13px;
+
+      letter-spacing: 0.08em;
+    }
+
+    .legit-info-card p {
+      margin: 0;
+
+      line-height: 1.8;
+    }
+
+    .legit-info-card a {
+      color: #765d49;
+    }
+
+
+    /* ===== 診断 ===== */
+
+    .legit-diagnosis {
+      display: grid;
+
+      gap: 16px;
+
+      margin-top: 30px;
+    }
+
+    .legit-diagnosis-item {
+      padding: 28px;
+
+      background: #fffdf9;
+
+      border:
+        1px solid
+        #e8ded2;
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 8px 25px
+        rgba(60, 45, 32, 0.04);
+    }
+
+    .legit-diagnosis-item strong {
+      color: #765d49;
+
+      letter-spacing: 0.06em;
+    }
+
+    .legit-diagnosis-item p {
+      margin: 10px 0 0;
+
+      line-height: 1.9;
+
+      color: #665b51;
+    }
+
+
+    /* ===== 改善ポイント ===== */
+
+    .legit-points {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 16px;
+
+      margin-top: 30px;
+    }
+
+    .legit-point {
+      padding: 26px;
+
+      background: #fffdf9;
+
+      border:
+        1px solid
+        #e8ded2;
+
+      border-radius: 18px;
+    }
+
+    .legit-point-number {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: #98785d;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      letter-spacing: 0.12em;
+    }
+
+    .legit-point h3 {
+      margin: 0 0 10px;
+
+      color: #493d34;
+
+      font-size: 18px;
+    }
+
+    .legit-point p {
+      margin: 0;
+
+      line-height: 1.8;
+
+      color: #665b51;
+    }
+
+
+    /* ===== 注意書き ===== */
+
+    .legit-note {
+      margin-top: 24px;
+
+      padding: 20px 22px;
+
+      border-radius: 14px;
+
+      background: #eee5d9;
+
+      color: #66594e;
+
+      font-size: 13px;
+
+      line-height: 1.8;
+    }
+
+
+    /* ===== CTA ===== */
+
+    .legit-cta {
+      padding: 62px 30px;
+
+      border-radius: 24px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #5d4c40,
+          #8c725c
+        );
+
+      color: #fff;
+
+      text-align: center;
+
+      box-shadow:
+        0 16px 40px
+        rgba(60, 45, 32, 0.15);
+    }
+
+    .legit-cta h2 {
+      color: #fff;
+
+      margin-bottom: 16px;
+    }
+
+    .legit-cta p {
+      color: rgba(255, 255, 255, 0.9);
+
+      line-height: 1.9;
+    }
+
+    .legit-btn {
+      display: inline-block;
+
+      margin-top: 16px;
+
+      padding: 14px 28px;
+
+      border-radius: 999px;
+
+      background: #fffaf3;
+
+      color: #57463a;
+
+      text-decoration: none;
+
+      font-weight: 700;
+    }
+
+    .legit-btn:hover {
+      transform: translateY(-2px);
+    }
+
+
+    /* ===== スマホ ===== */
+
+    @media (max-width: 700px) {
+
+      .legit-hero {
+        min-height: 560px;
+      }
+
+      .legit-hero::before {
+        background:
+          linear-gradient(
+            90deg,
+            rgba(42, 32, 25, 0.70),
+            rgba(42, 32, 25, 0.28)
+          ),
+          url("legit-1.jpeg") center / cover no-repeat;
+      }
+
+      .legit-hero-copy {
+        padding: 75px 0;
+      }
+
+      .legit-photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .legit-photo-large {
+        min-height: 430px;
+      }
+
+      .legit-photo-stack {
+        grid-template-rows: none;
+
+        grid-template-columns:
+          1fr
+          1fr;
+      }
+
+      .legit-photo-small {
+        min-height: 210px;
+      }
+
+      .legit-info {
+        grid-template-columns: 1fr;
+      }
+
+      .legit-points {
+        grid-template-columns: 1fr;
+      }
+
+      .legit-section {
+        padding: 55px 0;
+      }
+    }
+
+
+    @media (max-width: 480px) {
+
+      .legit-photo-stack {
+        grid-template-columns: 1fr;
+      }
+
+      .legit-photo-small {
+        min-height: 280px;
+      }
+
+      .legit-hero h1 {
+        font-size: 46px;
+      }
+
+      .legit-hero h1 span {
+        font-size: 17px;
+      }
+
+      .legit-cta {
+        padding: 48px 22px;
+      }
+    }
+  </style>
 </head>
+
 
 <body>
 
 <header class="site-header">
+
   <div class="container nav-wrap">
 
     <a class="brand" href="index.html">
@@ -31,71 +542,174 @@
     </nav>
 
   </div>
+
 </header>
 
 
 <main>
 
-<!-- HERO -->
-<section class="hero compact">
-  <div class="container">
 
-    <p class="eyebrow">DIAGNOSIS SAMPLE</p>
+  <!-- =========================
+       HERO
+  ========================== -->
 
-    <h1>
-      CAFE Legit<br>
-      <span>リジット</span>
-    </h1>
+  <section class="legit-hero">
 
-    <p class="lead">
-      山陽小野田市｜カフェ・バー<br>
-      店舗集客診断サンプル
-    </p>
+    <div class="container">
 
-  </div>
-</section>
+      <div class="legit-hero-copy">
+
+        <span class="legit-kicker">
+          DIAGNOSIS SAMPLE / YAMAGUCHI
+        </span>
+
+        <h1>
+          CAFE Legit
+          <span>リジット</span>
+        </h1>
+
+        <p>
+          山陽小野田市・小野田駅エリアのカフェ。<br>
+          写真・SNS・検索導線の視点から、店舗集客をチェックします。
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
 
 
-<!-- BASIC INFO -->
-<section class="section">
-  <div class="container narrow">
 
-    <div class="card">
+  <!-- =========================
+       PHOTO
+  ========================== -->
 
-      <p class="eyebrow">SHOP INFORMATION</p>
+  <section class="legit-section">
 
-      <h2>店舗情報</h2>
+    <div class="container">
 
-      <div class="diagnosis-list">
+      <span class="legit-label">
+        PHOTO
+      </span>
 
-        <div>
+      <h2>
+        写真から伝わる、Legitの魅力
+      </h2>
+
+      <p class="legit-lead">
+        食事からスイーツまで、写真だけでも
+        「何を楽しめるお店なのか」が伝わります。
+        こうした視覚的な魅力は、InstagramやGoogleマップで
+        初めて店舗を知る人への入口として活用できます。
+      </p>
+
+
+      <div class="legit-photo-grid">
+
+        <div class="legit-photo legit-photo-large">
+
+          <img
+            src="legit-1.jpeg"
+            alt="CAFE Legitのオムライス"
+          >
+
+          <div class="legit-caption">
+            食事メニューのイメージ
+          </div>
+
+        </div>
+
+
+        <div class="legit-photo-stack">
+
+          <div class="legit-photo legit-photo-small">
+
+            <img
+              src="legit-2.jpeg"
+              alt="CAFE Legitのケーキ"
+            >
+
+          </div>
+
+
+          <div class="legit-photo legit-photo-small">
+
+            <img
+              src="legit-3.jpeg"
+              alt="CAFE Legitのスイーツ"
+            >
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       SHOP INFORMATION
+  ========================== -->
+
+  <section class="legit-section">
+
+    <div class="container">
+
+      <span class="legit-label">
+        SHOP INFORMATION
+      </span>
+
+      <h2>
+        店舗情報
+      </h2>
+
+
+      <div class="legit-info">
+
+        <div class="legit-info-card">
+
           <b>店舗名</b>
-          <p>CAFE Legit（リジット）</p>
-        </div>
 
-        <div>
-          <b>所在地</b>
-          <p>山口県山陽小野田市日の出3丁目7-21</p>
-        </div>
-
-        <div>
-          <b>アクセス</b>
-          <p>JR小野田駅から徒歩約1分</p>
-        </div>
-
-        <div>
-          <b>電話</b>
-          <p>0836-38-6210</p>
-        </div>
-
-        <div>
-          <b>ジャンル</b>
-          <p>カフェ・バー</p>
-        </div>
-
-        <div>
-          <b>公式Instagram</b>
           <p>
+            CAFE Legit（リジット）
+          </p>
+
+        </div>
+
+
+        <div class="legit-info-card">
+
+          <b>所在地</b>
+
+          <p>
+            山口県山陽小野田市日の出3丁目7-21
+          </p>
+
+        </div>
+
+
+        <div class="legit-info-card">
+
+          <b>アクセス</b>
+
+          <p>
+            JR小野田駅から徒歩約1分
+          </p>
+
+        </div>
+
+
+        <div class="legit-info-card">
+
+          <b>Instagram</b>
+
+          <p>
+
             <a
               href="https://www.instagram.com/legit.onoda/"
               target="_blank"
@@ -103,275 +717,303 @@
             >
               @legit.onoda
             </a>
+
           </p>
+
         </div>
+
+      </div>
+
+
+      <div class="legit-note">
+
+        ※店舗情報は公開情報をもとにした診断サンプルです。
+        営業時間・メニュー・サービス内容などは変更される可能性があります。
+        最新情報は公式情報をご確認ください。
 
       </div>
 
     </div>
 
-  </div>
-</section>
+  </section>
 
 
-<!-- SUMMARY -->
-<section class="section">
-  <div class="container narrow">
 
-    <div class="card">
+  <!-- =========================
+       DIAGNOSIS
+  ========================== -->
 
-      <p class="eyebrow">FIRST IMPRESSION</p>
+  <section class="legit-section">
 
-      <h2>公開情報から見た第一印象</h2>
+    <div class="container">
 
-      <p>
-        CAFE Legitは、山陽小野田市の日の出エリアにあるカフェ・バー。
-        小野田駅から徒歩約1分というアクセスの良さに加え、
-        カフェ利用だけでなく夜の時間帯にも利用できる店舗として紹介されています。
-      </p>
+      <span class="legit-label">
+        DIAGNOSIS
+      </span>
 
-      <p>
-        また、公式Instagramへの導線や、運営会社の公式サイトからも
-        店舗情報を確認できる状態です。
-      </p>
-
-    </div>
-
-  </div>
-</section>
+      <h2>
+        集客導線を3段階でチェック
+      </h2>
 
 
-<!-- DIAGNOSIS -->
-<section class="section">
-  <div class="container narrow">
+      <div class="legit-diagnosis">
 
-    <div class="card">
 
-      <p class="eyebrow">DIAGNOSIS</p>
+        <div class="legit-diagnosis-item">
 
-      <h2>集客導線を3段階でチェック</h2>
-
-      <div class="diagnosis-list">
-
-        <div>
-          <b>01｜発見</b>
+          <strong>
+            01｜発見
+          </strong>
 
           <p>
-            Google検索・Googleマップ・Instagramなど、
-            初めて知る人が店舗を発見する入口を確認。
+            Google検索・Googleマップ・Instagramなどから、
+            店名を知らない人にも店舗の存在が届く導線を確認します。
           </p>
 
-          <p>
-            <strong>確認ポイント：</strong>
-            店名だけでなく「山陽小野田 カフェ」
-            「小野田駅 カフェ」などの検索から
-            店舗情報へ到達しやすい状態になっているか。
-          </p>
         </div>
 
 
-        <div>
-          <b>02｜比較</b>
+        <div class="legit-diagnosis-item">
+
+          <strong>
+            02｜比較
+          </strong>
 
           <p>
-            店舗を見つけた人が、
-            「どんな店なのか」「何が魅力なのか」を
-            短時間で理解できるかを確認。
+            写真や店舗情報を見た人が、
+            「どんなお店か」「何を楽しめるか」を
+            短時間で理解できる構成になっているか確認します。
           </p>
 
-          <p>
-            <strong>確認ポイント：</strong>
-            店舗の雰囲気、スイーツ・ドリンク、
-            カフェ利用・夜利用などの特徴が
-            Instagramや店舗情報から伝わるか。
-          </p>
         </div>
 
 
-        <div>
-          <b>03｜来店</b>
+        <div class="legit-diagnosis-item">
+
+          <strong>
+            03｜来店
+          </strong>
 
           <p>
-            「行ってみよう」と思った人が、
-            実際の来店まで迷わない導線になっているかを確認。
+            住所・アクセス・営業時間・SNSなど、
+            来店を決めた人が必要な情報へ
+            迷わず進めるかを確認します。
           </p>
 
-          <p>
-            <strong>確認ポイント：</strong>
-            住所・アクセス・営業時間・電話・
-            Instagramなどの情報を簡単に確認できるか。
-          </p>
         </div>
+
 
       </div>
 
     </div>
 
-  </div>
-</section>
+  </section>
 
 
-<!-- GOOD POINTS -->
-<section class="section">
-  <div class="container narrow">
 
-    <div class="card">
+  <!-- =========================
+       IMPROVEMENT
+  ========================== -->
 
-      <p class="eyebrow">GOOD POINTS</p>
+  <section class="legit-section">
 
-      <h2>確認できた強み</h2>
+    <div class="container">
 
-      <ul class="check-list">
+      <span class="legit-label">
+        IMPROVEMENT
+      </span>
 
-        <li>
-          小野田駅から徒歩約1分というアクセスの良さ
-        </li>
-
-        <li>
-          カフェだけでなく夜の時間帯にも利用できる店舗形態
-        </li>
-
-        <li>
-          公式Instagramがあり、SNSから情報を確認できる
-        </li>
-
-        <li>
-          運営会社の公式サイトにも店舗情報が掲載されている
-        </li>
-
-        <li>
-          カフェ・スイーツ・ドリンクなど、
-          SNSで視覚的に魅力を伝えやすい業態
-        </li>
-
-      </ul>
-
-    </div>
-
-  </div>
-</section>
+      <h2>
+        さらに確認したいポイント
+      </h2>
 
 
-<!-- IMPROVEMENT -->
-<section class="section">
-  <div class="container narrow">
+      <div class="legit-points">
 
-    <div class="card">
 
-      <p class="eyebrow">IMPROVEMENT POINTS</p>
+        <div class="legit-point">
 
-      <h2>さらに確認したいポイント</h2>
+          <span class="legit-point-number">
+            POINT 01
+          </span>
 
-      <div class="diagnosis-list">
-
-        <div>
-          <b>01｜検索導線</b>
+          <h3>
+            検索導線
+          </h3>
 
           <p>
-            「山陽小野田 カフェ」「小野田駅 カフェ」など、
-            店舗名を知らない人からの検索導線を確認。
+            「山陽小野田 カフェ」
+            「小野田駅 カフェ」など、
+            店名を知らない人からの検索導線を確認します。
           </p>
+
         </div>
 
 
-        <div>
-          <b>02｜Instagram導線</b>
+        <div class="legit-point">
+
+          <span class="legit-point-number">
+            POINT 02
+          </span>
+
+          <h3>
+            Instagram導線
+          </h3>
 
           <p>
             プロフィールを見た人が、
-            店舗の特徴・おすすめ商品・営業時間などを
-            短時間で把握できる構成になっているか確認。
+            店舗の特徴やおすすめを短時間で
+            把握できる構成になっているか確認します。
           </p>
+
         </div>
 
 
-        <div>
-          <b>03｜来店前の不安</b>
+        <div class="legit-point">
+
+          <span class="legit-point-number">
+            POINT 03
+          </span>
+
+          <h3>
+            写真の活用
+          </h3>
 
           <p>
-            駐車場・アクセス・営業時間・予約方法など、
-            初来店時に迷いやすい情報が
-            すぐ確認できる状態かチェック。
+            オムライスやケーキなど、
+            見た瞬間に魅力が伝わる写真を
+            GoogleマップやSNSで効果的に使えているか確認します。
           </p>
+
         </div>
 
 
-        <div>
-          <b>04｜Web導線</b>
+        <div class="legit-point">
+
+          <span class="legit-point-number">
+            POINT 04
+          </span>
+
+          <h3>
+            来店前の情報
+          </h3>
 
           <p>
-            InstagramやGoogleマップなど、
-            複数の入口から店舗情報へ
-            スムーズにつながる構成を確認。
+            営業時間・アクセス・駐車場・
+            問い合わせ方法など、
+            初来店時に必要な情報を確認します。
           </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       LAST PHOTO
+  ========================== -->
+
+  <section class="legit-section">
+
+    <div class="container">
+
+      <span class="legit-label">
+        CAFE TIME
+      </span>
+
+      <h2>
+        カフェ時間をイメージできる写真
+      </h2>
+
+
+      <div class="legit-photo-grid">
+
+        <div class="legit-photo legit-photo-large">
+
+          <img
+            src="legit-4.jpeg"
+            alt="CAFE Legitのスイーツとコーヒー"
+          >
+
+        </div>
+
+
+        <div class="legit-photo legit-photo-large">
+
+          <img
+            src="legit-3.jpeg"
+            alt="CAFE Legitのスイーツ"
+          >
+
         </div>
 
       </div>
 
     </div>
 
-  </div>
-</section>
+  </section>
 
 
-<!-- DATA NOTE -->
-<section class="section">
-  <div class="container narrow">
 
-    <div class="notice">
+  <!-- =========================
+       CTA
+  ========================== -->
 
-      <strong>情報について</strong>
+  <section class="legit-section">
 
-      <p>
-        本ページの店舗情報は、公開されている情報をもとに作成した
-        診断サンプルです。
-        営業時間・メニュー・サービス内容などは変更される可能性があるため、
-        最新情報は公式情報をご確認ください。
-      </p>
+    <div class="container">
 
-    </div>
+      <div class="legit-cta">
 
-  </div>
-</section>
+        <span class="legit-kicker">
+          FREE DIAGNOSIS
+        </span>
 
+        <h2>
+          あなたのお店も、無料でチェック。
+        </h2>
 
-<!-- CTA -->
-<section class="section">
-  <div class="container">
+        <p>
+          Instagram・Googleマップ・ホームページなど、<br>
+          店舗の集客導線をまとめて確認します。
+        </p>
 
-    <div class="cta">
+        <a
+          class="legit-btn"
+          href="diagnosis.html"
+        >
+          無料店舗診断はこちら
+        </a>
 
-      <p class="eyebrow">FREE DIAGNOSIS</p>
-
-      <h2>
-        あなたのお店も<br>
-        無料でチェックできます。
-      </h2>
-
-      <p>
-        Instagram・Googleマップ・ホームページなど、
-        店舗の集客導線をまとめて確認します。
-      </p>
-
-      <a class="btn" href="diagnosis.html">
-        無料店舗診断はこちら
-      </a>
+      </div>
 
     </div>
 
-  </div>
-</section>
+  </section>
+
 
 </main>
 
 
+
 <footer class="footer">
+
   <div class="container">
 
-    <p>© 山口店舗集客</p>
+    <p>
+      © 山口店舗集客
+    </p>
 
   </div>
+
 </footer>
+
 
 </body>
 </html>
