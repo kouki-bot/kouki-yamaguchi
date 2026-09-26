@@ -3,26 +3,713 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>サービス｜山口店舗集客</title>
-  <meta name="description" content="山口県の店舗向け。無料店舗診断、ホームページ制作、Instagram改善サポート。">
+
+  <title>店舗サイト制作・集客サポート｜山口店舗集客</title>
+
+  <meta
+    name="description"
+    content="山口県の店舗向け。無料店舗診断から、店舗ホームページ制作、Instagram・Googleマップの導線改善までサポートします。"
+  >
+
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .service-page {
+      background: #faf9f6;
+      color: #222;
+    }
+
+    .service-hero {
+      padding: 100px 20px 90px;
+      background: #f1eee8;
+    }
+
+    .service-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .service-eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .service-hero h1 {
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.3;
+      margin: 0 0 25px;
+    }
+
+    .service-hero .lead {
+      max-width: 700px;
+      line-height: 2;
+      color: #555;
+      font-size: 16px;
+    }
+
+    .service-section {
+      max-width: 1000px;
+      margin: 100px auto;
+      padding: 0 20px;
+    }
+
+    .service-label {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      color: #888;
+      margin-bottom: 12px;
+    }
+
+    .service-section h2 {
+      font-size: 32px;
+      line-height: 1.5;
+      margin: 0 0 20px;
+    }
+
+    .service-section > p {
+      line-height: 2;
+      color: #666;
+    }
+
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .service-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 18px;
+      padding: 30px;
+    }
+
+    .service-card-number {
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      color: #999;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      font-size: 21px;
+      margin: 0 0 15px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      line-height: 1.9;
+      color: #666;
+      margin: 0;
+    }
+
+    .service-card ul {
+      padding-left: 20px;
+      margin-top: 20px;
+    }
+
+    .service-card li {
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .highlight {
+      background: #f1eee8;
+      border-radius: 20px;
+      padding: 40px;
+      margin-top: 40px;
+    }
+
+    .highlight h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .highlight p {
+      line-height: 2;
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    .reason-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 35px;
+    }
+
+    .reason {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .reason strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .reason span {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.8;
+    }
+
+    .plan-table {
+      margin-top: 35px;
+      display: grid;
+      gap: 15px;
+    }
+
+    .plan {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 18px;
+      padding: 30px;
+    }
+
+    .plan h3 {
+      margin: 0 0 8px;
+      font-size: 21px;
+    }
+
+    .plan-price {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .plan p {
+      font-size: 14px;
+      line-height: 1.9;
+      color: #666;
+    }
+
+    .flow {
+      display: grid;
+      gap: 15px;
+      margin-top: 35px;
+    }
+
+    .flow-item {
+      display: flex;
+      gap: 20px;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .flow-number {
+      font-weight: 700;
+      min-width: 30px;
+    }
+
+    .flow-text strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .flow-text span {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.8;
+    }
+
+    .service-cta {
+      margin-top: 100px;
+      padding: 90px 20px;
+      background: #222;
+      color: #fff;
+      text-align: center;
+    }
+
+    .service-cta h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .service-cta p {
+      color: #ddd;
+      line-height: 1.9;
+    }
+
+    .service-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .service-button {
+      display: inline-block;
+      padding: 15px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      background: #fff;
+      color: #222;
+    }
+
+    .service-button.secondary {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #777;
+    }
+
+    @media (max-width: 700px) {
+
+      .service-hero {
+        padding: 75px 20px 65px;
+      }
+
+      .service-section {
+        margin: 75px auto;
+      }
+
+      .service-cards,
+      .reason-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .highlight {
+        padding: 30px 25px;
+      }
+
+      .service-cta {
+        padding: 70px 20px;
+      }
+
+    }
+  </style>
 </head>
-<body>
-<header class="site-header"><div class="container nav-wrap">
-  <a class="brand" href="index.html">山口店舗集客</a>
-  <nav><a href="service.html">サービス</a><a href="index.html#flow">流れ</a><a href="index.html#faq">FAQ</a><a href="shops/index.html">診断実績</a><a href="diagnosis.html">無料診断</a></nav>
-</div></header>
+
+
+<body class="service-page">
+
+<header class="site-header">
+  <div class="container nav-wrap">
+
+    <a class="brand" href="index.html">
+      山口店舗集客
+    </a>
+
+    <nav>
+      <a href="service.html">サービス</a>
+      <a href="index.html#flow">流れ</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="diagnosis.html">診断実績</a>
+      <a href="diagnosis.html">無料診断</a>
+    </nav>
+
+  </div>
+</header>
+
+
 <main>
-<section class="hero compact"><div class="container"><p class="eyebrow">SERVICE</p><h1>必要なところだけ、<br>集客を改善。</h1><p class="lead">店舗の状況に合わせて、診断・制作・運用を組み合わせます。</p></div></section>
-<section class="section"><div class="container">
-<div class="cards three">
-<article class="card"><span class="card-num">01</span><h2>無料店舗診断</h2><p>Instagram、Googleマップ、ホームページの見え方と導線を整理します。</p></article>
-<article class="card"><span class="card-num">02</span><h2>店舗ホームページ制作</h2><p>スマホを中心に、店舗情報・アクセス・SNSへの導線をまとめます。</p></article>
-<article class="card"><span class="card-num">03</span><h2>Instagram改善サポート</h2><p>プロフィール、投稿、検索されやすい情報設計を整理します。</p></article>
-</div>
-</div></section>
-<section class="cta"><div class="container"><h2>まずは現状を確認。</h2><p>無料診断からご相談ください。</p><a class="btn primary" href="diagnosis.html">無料店舗診断 →</a></div></section>
+
+  <!-- HERO -->
+
+  <section class="service-hero">
+
+    <div class="service-hero-inner">
+
+      <div class="service-eyebrow">
+        STORE WEB SUPPORT
+      </div>
+
+      <h1>
+        お店の魅力を、<br>
+        Webでも伝わる形に。
+      </h1>
+
+      <p class="lead">
+        InstagramやGoogleマップだけでは伝えきれない
+        お店の魅力を、店舗専用サイトにまとめます。
+        まずは無料診断から、現在の集客導線を確認できます。
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONCEPT -->
+
+  <section class="service-section">
+
+    <div class="service-label">
+      CONCEPT
+    </div>
+
+    <h2>
+      「ホームページを作る」だけではなく、<br>
+      「見つけてもらう」まで考える。
+    </h2>
+
+    <p>
+      お店を検索したお客様は、
+      Instagram、Googleマップ、ホームページなど
+      複数の情報を見ながら来店を決めます。
+    </p>
+
+    <p>
+      そこで、店舗サイトだけを作るのではなく、
+      InstagramやGoogleマップから店舗サイトへ、
+      そして来店につながる導線まで整理します。
+    </p>
+
+    <div class="highlight">
+
+      <h3>
+        無料診断を営業資料にしています。
+      </h3>
+
+      <p>
+        実際の店舗を公開情報から無料診断し、
+        「どこを改善すると分かりやすくなるか」を
+        具体的に整理しています。
+        診断を見たうえで、必要であれば
+        店舗サイト制作をご相談いただけます。
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICE -->
+
+  <section class="service-section">
+
+    <div class="service-label">
+      SERVICE
+    </div>
+
+    <h2>
+      できること
+    </h2>
+
+    <div class="service-cards">
+
+      <article class="service-card">
+
+        <div class="service-card-number">
+          01
+        </div>
+
+        <h3>
+          無料店舗診断
+        </h3>
+
+        <p>
+          Instagram・Googleマップ・Webなどを
+          お客様目線でチェックします。
+        </p>
+
+        <ul>
+          <li>店舗情報の分かりやすさ</li>
+          <li>Instagramからの導線</li>
+          <li>Google検索からの導線</li>
+          <li>来店前に必要な情報</li>
+        </ul>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="service-card-number">
+          02
+        </div>
+
+        <h3>
+          店舗サイト制作
+        </h3>
+
+        <p>
+          スマートフォンを中心に、
+          お店専用のWebサイトを制作します。
+        </p>
+
+        <ul>
+          <li>店舗紹介</li>
+          <li>メニュー・商品紹介</li>
+          <li>アクセス・Googleマップ</li>
+          <li>Instagramへの導線</li>
+        </ul>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="service-card-number">
+          03
+        </div>
+
+        <h3>
+          Instagram改善
+        </h3>
+
+        <p>
+          プロフィールや投稿内容を整理し、
+          店舗サイトとの導線も考えます。
+        </p>
+
+        <ul>
+          <li>プロフィール改善</li>
+          <li>投稿内容の整理</li>
+          <li>検索キーワード</li>
+          <li>Webサイトへの導線</li>
+        </ul>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY -->
+
+  <section class="service-section">
+
+    <div class="service-label">
+      RECOMMENDED FOR
+    </div>
+
+    <h2>
+      こんなお店におすすめ
+    </h2>
+
+    <div class="reason-grid">
+
+      <div class="reason">
+        <strong>ホームページがない</strong>
+        <span>
+          Instagramだけでは伝えにくい店舗情報を
+          1つのサイトにまとめたい。
+        </span>
+      </div>
+
+      <div class="reason">
+        <strong>Instagramをもっと活用したい</strong>
+        <span>
+          投稿を見た人を店舗情報や来店につなげたい。
+        </span>
+      </div>
+
+      <div class="reason">
+        <strong>Google検索を強化したい</strong>
+        <span>
+          店名や地域名で検索されたときに、
+          店舗情報を分かりやすく見せたい。
+        </span>
+      </div>
+
+      <div class="reason">
+        <strong>お店の魅力をWebでも伝えたい</strong>
+        <span>
+          写真・メニュー・お店の雰囲気などを
+          自分のお店専用ページにまとめたい。
+        </span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PLAN -->
+
+  <section class="service-section">
+
+    <div class="service-label">
+      PLAN
+    </div>
+
+    <h2>
+      店舗サイト制作
+    </h2>
+
+    <p>
+      店舗の規模や必要なページ数に合わせて
+      内容を相談しながら決定します。
+    </p>
+
+    <div class="plan-table">
+
+      <div class="plan">
+
+        <h3>
+          シンプルプラン
+        </h3>
+
+        <div class="plan-price">
+          10,000円〜
+        </div>
+
+        <p>
+          店舗紹介・営業時間・アクセス・
+          Instagramなど、必要最低限の情報を
+          1ページにまとめます。
+        </p>
+
+      </div>
+
+
+      <div class="plan">
+
+        <h3>
+          スタンダードプラン
+        </h3>
+
+        <div class="plan-price">
+          30,000円〜
+        </div>
+
+        <p>
+          店舗紹介・メニュー・写真・アクセス・
+          Googleマップ・Instagramなど、
+          来店前に必要な情報を整理したサイトを制作します。
+        </p>
+
+      </div>
+
+
+      <div class="plan">
+
+        <h3>
+          オリジナルプラン
+        </h3>
+
+        <div class="plan-price">
+          要相談
+        </div>
+
+        <p>
+          ページ構成やデザインなど、
+          店舗の目的に合わせて個別に設計します。
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FLOW -->
+
+  <section class="service-section">
+
+    <div class="service-label">
+      FLOW
+    </div>
+
+    <h2>
+      ご依頼までの流れ
+    </h2>
+
+    <div class="flow">
+
+      <div class="flow-item">
+        <div class="flow-number">01</div>
+        <div class="flow-text">
+          <strong>無料診断</strong>
+          <span>
+            Instagram・Googleマップ・Webなどを確認します。
+          </span>
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-number">02</div>
+        <div class="flow-text">
+          <strong>ご相談</strong>
+          <span>
+            必要なページや掲載したい情報を確認します。
+          </span>
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-number">03</div>
+        <div class="flow-text">
+          <strong>サイト制作</strong>
+          <span>
+            店舗に合わせてサイトを制作します。
+          </span>
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-number">04</div>
+        <div class="flow-text">
+          <strong>公開</strong>
+          <span>
+            内容を確認して公開します。
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="service-cta">
+
+    <h2>
+      まずは無料診断から。
+    </h2>
+
+    <p>
+      「ホームページを作った方がいい？」<br>
+      「Instagramだけで十分？」<br>
+      そんな段階でもご相談いただけます。
+    </p>
+
+    <div class="service-buttons">
+
+      <a
+        class="service-button"
+        href="diagnosis.html"
+      >
+        無料診断を見る →
+      </a>
+
+      <a
+        class="service-button secondary"
+        href="mailto:"
+      >
+        制作について相談する →
+      </a>
+
+    </div>
+
+  </section>
+
 </main>
-<footer class="footer"><div class="container"><p>© 山口店舗集客</p></div></footer>
+
+
+<footer class="footer">
+
+  <div class="container">
+    <p>© 山口店舗集客</p>
+  </div>
+
+</footer>
+
 </body>
 </html>
