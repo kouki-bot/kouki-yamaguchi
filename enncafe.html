@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Enn café｜店舗診断｜山口店舗集客</title>
+
+  <meta
+    name="description"
+    content="宇部市のEnn caféを、初めてお店を知るお客様の目線からInstagram・Googleマップ・Web導線などの観点で分析した店舗診断。"
+  >
+
+  <style>
+    :root {
+      --ink: #332d27;
+      --muted: #766b60;
+      --bg: #f7f3ec;
+      --card: #fffdf9;
+      --line: #e6ddd0;
+      --accent: #52634d;
+      --accent-light: #e8dcc2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Noto Sans JP",
+        "Yu Gothic",
+        sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* ====================
+       HEADER
+    ==================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(247, 243, 236, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 20px;
+      font-size: 13px;
+    }
+
+    .navlinks a:hover {
+      text-decoration: underline;
+    }
+
+    /* ====================
+       HERO
+    ==================== */
+
+    .hero {
+      padding: 72px 0 45px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 6vw, 64px);
+      line-height: 1.2;
+      margin: 14px 0;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 720px;
+    }
+
+    .hero-photo {
+      margin-top: 36px;
+      border-radius: 28px;
+      overflow: hidden;
+      aspect-ratio: 16 / 8;
+      box-shadow: 0 16px 45px rgba(50, 40, 30, 0.12);
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ====================
+       SECTION
+    ==================== */
+
+    .section {
+      padding: 70px 0;
+    }
+
+    .section.alt {
+      background: #eee7dc;
+    }
+
+    .section h2 {
+      font-size: clamp(26px, 4vw, 40px);
+      line-height: 1.35;
+      margin: 8px 0 25px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    /* ====================
+       CARDS
+    ==================== */
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 28px;
+    }
+
+    .num {
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 0.1em;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin: 10px 0;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ====================
+       DIAGNOSIS
+    ==================== */
+
+    .result {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .result .card {
+      min-height: 220px;
+    }
+
+    /* ====================
+       PHOTO
+    ==================== */
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .photo-grid figure {
+      margin: 0;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .photo-grid figcaption {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    /* ====================
+       IMPROVEMENT
+    ==================== */
+
+    .improve {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .improve .card {
+      border-left: 5px solid var(--accent);
+    }
+
+    /* ====================
+       SHOP INFO
+    ==================== */
+
+    .info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .info .card strong {
+      display: block;
+      font-size: 13px;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .info .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* ====================
+       CTA
+    ==================== */
+
+    .cta {
+      padding: 75px 0;
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .cta p {
+      color: #d8d0c6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    /* ====================
+       FOOTER
+    ==================== */
+
+    footer {
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ====================
+       MOBILE
+    ==================== */
+
+    @media (max-width: 760px) {
+
+      .container {
+        width: min(100% - 28px, 1080px);
+      }
+
+      .nav {
+        min-height: auto;
+        padding: 15px 0;
+        align-items: flex-start;
+      }
+
+      .navlinks {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .hero {
+        padding-top: 45px;
+      }
+
+      .grid3,
+      .result,
+      .improve,
+      .info {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo {
+        aspect-ratio: 4 / 3;
+      }
+
+      .section {
+        padding: 55px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+
+      <a class="brand" href="index.html">
+        山口店舗集客
+      </a>
+
+      <nav class="navlinks">
+        <a href="index.html">TOP</a>
+        <a href="service.html">サービス</a>
+        <a href="diagnosis.html">無料診断</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="container">
+
+        <p class="eyebrow">
+          DIAGNOSIS CASE
+        </p>
+
+        <h1>
+          Enn café<br>
+          店舗診断
+        </h1>
+
+        <p class="lead">
+          宇部市のEnn caféを、
+          初めてお店を知るお客様の目線から、
+          Instagram・Googleマップ・Webで
+          「魅力がどう伝わるか」を分析しました。
+        </p>
+
+        <div class="hero-photo">
+          <img
+            src="enncafe-1.jpeg"
+            alt="Enn café 外観"
+          >
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="section">
+
+      <div class="container">
+
+        <p class="eyebrow">
+          ABOUT THIS DIAGNOSIS
+        </p>
+
+        <h2>
+          写真から伝わる<br>
+          「料理＋空間＋世界観」
+        </h2>
+
+        <p class="section-intro">
+          今回使用している写真は、
+          実際に撮影したEnn caféの写真です。
+          店舗の雰囲気、店内、スイーツを中心に、
+          初めて見る人が「行ってみたい」と感じる
+          情報設計を考えました。
+        </p>
+
+
+        <div class="photo-grid">
+
+          <figure>
+            <img
+              src="enncafe-1.jpeg"
+              alt="Enn café 外観"
+            >
+            <figcaption>
+              外観｜木の温かみと落ち着いた雰囲気
+            </figcaption>
+          </figure>
+
+
+          <figure>
+            <img
+              src="enncafe-2.jpeg"
+              alt="Enn café 店内"
+            >
+            <figcaption>
+              店内｜木・家具・雑貨がつくる世界観
+            </figcaption>
+          </figure>
+
+
+          <figure>
+            <img
+              src="enncafe-3.jpeg"
+              alt="Enn café 店内"
+            >
+            <figcaption>
+              店内｜ゆっくり過ごせる空間
+            </figcaption>
+          </figure>
+
+
+          <figure>
+            <img
+              src="enncafe-4.jpeg"
+              alt="Enn café チョコテリーヌ"
+            >
+            <figcaption>
+              スイーツ｜写真で伝えやすいメニュー
+            </figcaption>
+          </figure>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DIAGNOSIS RESULT -->
+    <section class="section alt">
+
+      <div class="container">
+
+        <p class="eyebrow">
+          DIAGNOSIS RESULT
+        </p>
+
+        <h2>
+          3つの視点から分析
+        </h2>
+
+
+        <div class="result">
+
+          <article class="card">
+
+            <span class="num">
+              01｜発見
+            </span>
+
+            <h3>
+              外観から個性が伝わる
+            </h3>
+
+            <p>
+              木の外壁、植物、照明、レンガなどが重なり、
+              一般的なカフェとは違う落ち着いた雰囲気が
+              写真から伝わります。
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="num">
+              02｜比較
+            </span>
+
+            <h3>
+              店内そのものが来店理由になる
+            </h3>
+
+            <p>
+              木の温もりや家具、雑貨など、
+              料理以外にも「この場所で過ごしたい」と
+              思える要素があります。
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="num">
+              03｜来店
+            </span>
+
+            <h3>
+              写真から店舗情報へつなげる
+            </h3>
+
+            <p>
+              魅力的な写真を見た人が、
+              営業情報・アクセス・メニューまで
+              迷わず確認できる導線を作ると、
+              来店前の不安を減らせます。
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- STRENGTH -->
+    <section class="section">
+
+      <div class="container">
+
+        <p class="eyebrow">
+          STRENGTH
+        </p>
+
+        <h2>
+          Enn caféの強み
+        </h2>
+
+
+        <div class="grid3">
+
+          <article class="card">
+
+            <span class="num">
+              01
+            </span>
+
+            <h3>
+              空間の個性
+            </h3>
+
+            <p>
+              外観から店内まで、
+              木を基調とした世界観がつながっています。
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="num">
+              02
+            </span>
+
+            <h3>
+              写真との相性
+            </h3>
+
+            <p>
+              店内・外観・料理を組み合わせることで、
+              お店の魅力を立体的に見せられます。
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="num">
+              03
+            </span>
+
+            <h3>
+              「過ごす時間」の価値
+            </h3>
+
+            <p>
+              料理だけでなく、
+              落ち着いた空間で過ごす時間そのものを
+              魅力として伝えられます。
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- IMPROVEMENT -->
+    <section class="section alt">
+
+      <div class="container">
+
+        <p class="eyebrow">
+          IMPROVEMENT
+        </p>
+
+        <h2>
+          さらに活かすなら
+        </h2>
+
+
+        <div class="improve">
+
+          <article class="card">
+
+            <h3>
+              01｜メニューを見つけやすく
+            </h3>
+
+            <p>
+              おすすめ料理やスイーツを
+              写真付きで整理すると、
+              初めての人にも魅力が伝わりやすくなります。
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <h3>
+              02｜営業情報をまとめる
+            </h3>
+
+            <p>
+              営業日・時間など、
+              来店前に確認したい情報を
+              一か所にまとめます。
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <h3>
+              03｜アクセスを分かりやすく
+            </h3>
+
+            <p>
+              住所・地図・駐車場などをまとめ、
+              初めて訪れる人の不安を減らします。
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <h3>
+              04｜Instagramから来店へ
+            </h3>
+
+            <p>
+              投稿で興味を持った人が、
+              店舗情報・地図まで
+              スムーズに進める導線を作ります。
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+    <section class="section">
+
+      <div class="container">
+
+        <p class="eyebrow">
+          SUMMARY
+        </p>
+
+        <h2>
+          「料理＋空間＋世界観」を<br>
+          Webでも伝える
+        </h2>
+
+        <p class="section-intro">
+          Enn caféは、料理だけでなく
+          外観・店内・家具・雑貨まで含めて
+          写真で伝えられる魅力があります。
+
+          Instagramで興味を持った人が、
+          店舗情報を確認して来店できる流れを整えることで、
+          この魅力をさらに活かせそうです。
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- SHOP INFO -->
+    <section class="section">
+
+      <div class="container">
+
+        <p class="eyebrow">
+          SHOP INFO
+        </p>
+
+        <h2>
+          店舗情報
+        </h2>
+
+
+        <div class="info">
+
+          <div class="card">
+
+            <strong>
+              店舗名
+            </strong>
+
+            <p>
+              Enn café
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <strong>
+              エリア
+            </strong>
+
+            <p>
+              山口県宇部市
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <strong>
+              住所
+            </strong>
+
+            <p>
+              山口県宇部市車地631-2
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <strong>
+              Instagram
+            </strong>
+
+            <p>
+              <a
+                href="https://www.instagram.com/enn_cafe/"
+                target="_blank"
+                rel="noopener"
+              >
+                @enn_cafe →
+              </a>
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <p
+          style="
+            color:var(--muted);
+            font-size:13px;
+            margin-top:18px;
+          "
+        >
+          ※店舗情報は公開情報をもとに掲載しています。
+          来店前は公式情報をご確認ください。
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+      <div class="container">
+
+        <p
+          class="eyebrow"
+          style="color:#d9c9a8;"
+        >
+          NEXT
+        </p>
+
+        <h2>
+          あなたのお店も<br>
+          無料で診断してみませんか？
+        </h2>
+
+        <p>
+          Instagram・Googleマップ・Web導線などを、
+          初めて知るお客様の目線から整理します。
+        </p>
+
+        <a
+          class="btn"
+          href="diagnosis.html"
+        >
+          無料店舗診断を見る →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container">
+
+      <p>
+        © 山口店舗集客
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
