@@ -7,17 +7,10 @@
     "status": "published"
   },
   {
-    "slug": "milkdo",
-    "name": "MILK DO dore iku? 新山口店",
-    "area": "山口市",
-    "summary": "Instagram・Googleマップ・Web導線から、店舗集客を無料診断しました。",
-    "status": "published"
-  }, 
-  {
     "slug": "enncafe",
     "name": "Enn café",
     "area": "宇部市",
-    "summary": "Instagram・Googleマップ・Web導線から、店舗集客を無料診断しました。",
+    "summary": "料理・空間・世界観に注目して、店舗の魅力を無料診断しました。",
     "status": "published"
   },
   {
@@ -26,6 +19,5 @@
     "area": "宇部市",
     "summary": "外観・料理・スイーツに注目して、店舗の魅力を無料診断しました。",
     "status": "published"
-
   }
 ]
