@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CaféØNE（カフェワン）｜店舗診断｜山口店舗集客</title>
+
+  <meta
+    name="description"
+    content="宇部市のCaféØNE（カフェワン）を、外観・料理・スイーツ・Web導線の視点から無料診断しました。"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    /* =========================
+       CaféØNE page
+    ========================= */
+
+    .shop-hero {
+      padding: 90px 20px 70px;
+      background: linear-gradient(
+        135deg,
+        #f4eee5,
+        #fffaf3
+      );
+    }
+
+    .shop-hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .shop-hero-text .eyebrow {
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #777;
+      margin-bottom: 15px;
+    }
+
+    .shop-hero h1 {
+      font-size: 42px;
+      line-height: 1.35;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .shop-hero h1 span {
+      display: block;
+      font-size: 17px;
+      font-weight: normal;
+      color: #777;
+      margin-top: 10px;
+    }
+
+    .shop-hero p {
+      line-height: 2;
+      color: #555;
+    }
+
+    .shop-hero-photo img {
+      width: 100%;
+      border-radius: 18px;
+      display: block;
+      box-shadow: 0 15px 40px rgba(0,0,0,.12);
+    }
+
+    .diagnosis-about {
+      padding: 80px 20px;
+      background: #fff;
+    }
+
+    .section-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #8b7355;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .section-text {
+      line-height: 2;
+      color: #555;
+    }
+
+    /* photo grid */
+
+    .shop-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .shop-photo-grid img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 14px;
+      display: block;
+    }
+
+    /* diagnosis */
+
+    .diagnosis-result {
+      padding: 90px 20px;
+      background: #f7f3ed;
+    }
+
+    .diagnosis-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 35px;
+      margin-top: 25px;
+      box-shadow: 0 5px 25px rgba(0,0,0,.05);
+    }
+
+    .diagnosis-number {
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #8b7355;
+      margin-bottom: 10px;
+    }
+
+    .diagnosis-card h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .diagnosis-card p {
+      line-height: 2;
+      color: #555;
+    }
+
+    .strength-box {
+      margin-top: 20px;
+      padding: 20px;
+      background: #faf7f1;
+      border-left: 4px solid #9a8060;
+      border-radius: 6px;
+    }
+
+    .strength-box strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #554632;
+    }
+
+    /* improvement */
+
+    .improvement {
+      padding: 90px 20px;
+      background: #fff;
+    }
+
+    .improvement-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .improvement-card {
+      padding: 28px;
+      background: #f8f5ef;
+      border-radius: 14px;
+    }
+
+    .improvement-card h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .improvement-card p {
+      line-height: 1.9;
+      color: #555;
+      font-size: 14px;
+    }
+
+    /* summary */
+
+    .summary {
+      padding: 80px 20px;
+      background: #f5eee4;
+    }
+
+    .summary-box {
+      max-width: 800px;
+      margin: 30px auto 0;
+      padding: 40px;
+      background: #fff;
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .summary-box p {
+      line-height: 2;
+      color: #555;
+    }
+
+    /* shop info */
+
+    .shop-info {
+      padding: 80px 20px;
+      background: #fff;
+    }
+
+    .shop-info-box {
+      max-width: 800px;
+      margin: 30px auto 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      padding: 18px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .info-label {
+      font-weight: bold;
+      color: #555;
+    }
+
+    .info-value {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    /* CTA */
+
+    .shop-cta {
+      padding: 90px 20px;
+      background: #302d29;
+      color: #fff;
+      text-align: center;
+    }
+
+    .shop-cta h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .shop-cta p {
+      line-height: 2;
+      color: #ddd;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 16px 35px;
+      background: #fff;
+      color: #333;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* responsive */
+
+    @media (max-width: 768px) {
+
+      .shop-hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .shop-hero h1 {
+        font-size: 32px;
+      }
+
+      .shop-photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .improvement-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .diagnosis-card {
+        padding: 25px;
+      }
+
+      .info-row {
+        grid-template-columns: 100px 1fr;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <div class="container">
+
+      <a href="index.html" class="logo">
+        山口店舗集客
+      </a>
+
+      <nav>
+        <a href="index.html">ホーム</a>
+        <a href="diagnosis.html">無料診断</a>
+        <a href="service.html">店舗サイト制作</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="shop-hero">
+
+    <div class="shop-hero-inner">
+
+      <div class="shop-hero-text">
+
+        <div class="eyebrow">
+          DIAGNOSIS CASE
+        </div>
+
+        <h1>
+          CaféØNE
+          <span>カフェワン｜宇部市</span>
+        </h1>
+
+        <p>
+          宇部市のCaféØNEを、
+          初めてお店を知るお客様の目線から
+          外観・料理・スイーツ・Web発信の視点で
+          無料診断してみました。
+        </p>
+
+      </div>
+
+
+      <div class="shop-hero-photo">
+
+        <img
+          src="cafeone-4.jpeg"
+          alt="CaféØNEの外観"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="diagnosis-about">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        ABOUT THIS DIAGNOSIS
+      </div>
+
+      <h2 class="section-title">
+        CaféØNEの魅力をチェック
+      </h2>
+
+      <p class="section-text">
+
+        今回は、CaféØNEの外観・料理・スイーツに注目。
+
+        特に写真から伝わる
+        「お店の雰囲気」
+        「料理の魅力」
+        「スイーツの魅力」
+        を中心に、
+        初めて知るお客様にどう伝わるかを考えました。
+
+      </p>
+
+
+      <div class="shop-photo-grid">
+
+        <img
+          src="cafeone-4.jpeg"
+          alt="CaféØNE 外観"
+        >
+
+        <img
+          src="cafeone-1.jpeg"
+          alt="CaféØNE オムライス"
+        >
+
+        <img
+          src="cafeone-2.jpeg"
+          alt="CaféØNE チーズケーキ"
+        >
+
+        <img
+          src="cafeone-3.jpeg"
+          alt="CaféØNE ガトーショコラ"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DIAGNOSIS -->
+
+  <section class="diagnosis-result">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        DIAGNOSIS RESULT
+      </div>
+
+      <h2 class="section-title">
+        CaféØNEの強み
+      </h2>
+
+
+      <!-- 01 -->
+
+      <div class="diagnosis-card">
+
+        <div class="diagnosis-number">
+          01｜外観
+        </div>
+
+        <h3>
+          一目で印象に残る外観
+        </h3>
+
+        <p>
+          レンガ調の建物と入口周辺の植物が印象的。
+
+          写真だけでも、
+          「どんな雰囲気のお店なのか」
+          をイメージしやすい外観です。
+        </p>
+
+        <div class="strength-box">
+
+          <strong>
+            POINT
+          </strong>
+
+          外観写真は、
+          GoogleマップやInstagramで
+          初めてお店を知る人への
+          第一印象として活用できます。
+
+        </div>
+
+      </div>
+
+
+      <!-- 02 -->
+
+      <div class="diagnosis-card">
+
+        <div class="diagnosis-number">
+          02｜料理
+        </div>
+
+        <h3>
+          写真から伝わるオムライスの存在感
+        </h3>
+
+        <p>
+          ふわっとした卵と
+          トマトソースの組み合わせが
+          写真でも分かりやすい一皿。
+
+          メニュー選びのきっかけになる
+          魅力的な料理写真です。
+        </p>
+
+        <div class="strength-box">
+
+          <strong>
+            POINT
+          </strong>
+
+          「料理名＋写真」をセットで発信すると、
+          初めてのお客様にも
+          メニューの魅力を伝えやすくなります。
+
+        </div>
+
+      </div>
+
+
+      <!-- 03 -->
+
+      <div class="diagnosis-card">
+
+        <div class="diagnosis-number">
+          03｜スイーツ
+        </div>
+
+        <h3>
+          カフェタイムを彩るスイーツ
+        </h3>
+
+        <p>
+          チーズケーキと
+          ガトーショコラ。
+
+          盛り付けまで楽しめるため、
+          Instagramなどの
+          写真コンテンツとも相性が良いメニューです。
+        </p>
+
+        <div class="strength-box">
+
+          <strong>
+            POINT
+          </strong>
+
+          「今日はどのスイーツにしよう？」
+          と思ってもらえるような
+          写真発信につなげられそうです。
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- IMPROVEMENT -->
+
+  <section class="improvement">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        IMPROVEMENT
+      </div>
+
+      <h2 class="section-title">
+        さらに活かせそうなポイント
+      </h2>
+
+      <p class="section-text">
+        現在の魅力を活かしながら、
+        Web上でさらに伝わりやすくするなら。
+      </p>
+
+
+      <div class="improvement-grid">
+
+
+        <div class="improvement-card">
+
+          <h3>
+            01｜料理写真
+          </h3>
+
+          <p>
+            オムライスなどのおすすめ料理を
+            定期的に発信。
+
+            「今日食べたい」と思ってもらえる
+            写真を増やしていく。
+          </p>
+
+        </div>
+
+
+        <div class="improvement-card">
+
+          <h3>
+            02｜スイーツ
+          </h3>
+
+          <p>
+            チーズケーキや
+            ガトーショコラなどを
+            写真付きで紹介。
+
+            カフェ利用のきっかけにつなげる。
+          </p>
+
+        </div>
+
+
+        <div class="improvement-card">
+
+          <h3>
+            03｜お店の雰囲気
+          </h3>
+
+          <p>
+            外観・店内・料理を組み合わせ、
+            「どんなお店なのか」が
+            初めての人にも伝わる発信にする。
+          </p>
+
+        </div>
+
+
+        <div class="improvement-card">
+
+          <h3>
+            04｜Googleマップ
+          </h3>
+
+          <p>
+            店舗情報・写真・最新情報を
+            分かりやすく整理して、
+            検索から来店までの導線を整える。
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SUMMARY -->
+
+  <section class="summary">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        SUMMARY
+      </div>
+
+      <h2 class="section-title">
+        CaféØNEの魅力
+      </h2>
+
+      <div class="summary-box">
+
+        <p>
+
+          CaféØNEは、
+
+          <br><br>
+
+          「印象に残る外観」<br>
+          「料理の魅力」<br>
+          「スイーツの魅力」
+
+          <br><br>
+
+          という、
+          写真で伝えやすい強みを持っています。
+
+          <br><br>
+
+          これらをInstagramやGoogleマップ、
+          店舗サイトで一貫して発信することで、
+          初めて知るお客様にも
+          お店の魅力を届けやすくなりそうです。
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SHOP INFO -->
+
+  <section class="shop-info">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        SHOP INFORMATION
+      </div>
+
+      <h2 class="section-title">
+        店舗情報
+      </h2>
+
+
+      <div class="shop-info-box">
+
+        <div class="info-row">
+
+          <div class="info-label">
+            店名
+          </div>
+
+          <div class="info-value">
+            Café ONE（カフェワン）
+          </div>
+
+        </div>
+
+
+        <div class="info-row">
+
+          <div class="info-label">
+            住所
+          </div>
+
+          <div class="info-value">
+            山口県宇部市東梶返4-6-12
+          </div>
+
+        </div>
+
+
+        <div class="info-row">
+
+          <div class="info-label">
+            電話
+          </div>
+
+          <div class="info-value">
+            0836-35-8255
+          </div>
+
+        </div>
+
+
+        <div class="info-row">
+
+          <div class="info-label">
+            営業時間
+          </div>
+
+          <div class="info-value">
+            月〜土 10:00〜19:00<br>
+            日 10:00〜18:00
+          </div>
+
+        </div>
+
+
+        <div class="info-row">
+
+          <div class="info-label">
+            診断
+          </div>
+
+          <div class="info-value">
+            公開情報・撮影写真をもとにした無料診断
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="shop-cta">
+
+    <h2>
+      あなたのお店も無料診断できます
+    </h2>
+
+    <p>
+      Instagram・Googleマップ・Webなどから<br>
+      お店の魅力と集客導線をチェックします。
+    </p>
+
+    <a
+      href="diagnosis.html"
+      class="cta-button"
+    >
+      無料店舗診断を見る
+    </a>
+
+  </section>
+
+
+</body>
+</html>
